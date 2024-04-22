@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+import {Routes, Route} from "react-router-dom";
+
 import "./App.css";
 import Header from "./components/header";
 import Home from "./pages/home";
@@ -66,7 +68,10 @@ function App() {
       </div> */}
       <AppContext.Provider value={{ items, setItems }}>
         <Header />
-        <Home />
+        {/* <Routes>
+          <Route exact path='/' element={<Home/>}/>
+        </Routes> */}
+        <Home/>
       </AppContext.Provider>
     </>
   );
